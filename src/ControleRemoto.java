@@ -46,10 +46,6 @@ public class ControleRemoto implements Controlador {
         this.menu = menu;
     }
 
-
-
-
-
     @Override
     public void ligar() {
         this.setLigado(true);
@@ -58,7 +54,7 @@ public class ControleRemoto implements Controlador {
     @Override
     public void desligar() {
         this.setLigado(false);
-        this.setTocando(false); // Se desligar, para de tocar automaticamente
+        this.setTocando(false);
     }
 
     @Override
