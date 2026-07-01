@@ -1,12 +1,11 @@
 public class ControleRemoto implements Controlador {
 
-    // Atributos
     private int volume;
     private boolean ligado;
     private boolean tocando;
     private boolean menu;
 
-    // Construtor
+
     public ControleRemoto() {
         this.volume = 50;
         this.ligado = false;
@@ -14,7 +13,7 @@ public class ControleRemoto implements Controlador {
         this.menu = false;
     }
 
-    // Métodos Especiais (Getters e Setters)
+
     public int getVolume() {
         return volume;
     }
@@ -51,7 +50,23 @@ public class ControleRemoto implements Controlador {
     @Override
     public void mudarCanal(int canal) {
         if (this.isLigado()) {
-            System.out.println("Mudando para o canal: " + canal);
+            switch (canal) {
+                case 4:
+                    System.out.println("Mudando para o canal 4: GLOBO");
+                    break;
+                case 8:
+                    System.out.println("Mudando para o canal 8: BAND");
+                    break;
+                case 10:
+                    System.out.println("Mudando para o canal 10: SBT");
+                    break;
+                case 14:
+                    System.out.println("Mudando para o canal 14: RECORD");
+                    break;
+                default:
+                    System.out.println("Canal " + canal + " não sintonizado ou fora do ar!");
+                    break;
+            }
         } else {
             System.out.println("Não é possível mudar de canal. O controle está desligado!");
         }
