@@ -1,11 +1,12 @@
 public class ControleRemoto implements Controlador {
 
+    // Atributos
     private int volume;
     private boolean ligado;
     private boolean tocando;
     private boolean menu;
 
-
+    // Construtor
     public ControleRemoto() {
         this.volume = 50;
         this.ligado = false;
@@ -13,7 +14,7 @@ public class ControleRemoto implements Controlador {
         this.menu = false;
     }
 
-
+    // Métodos Especiais (Getters e Setters)
     public int getVolume() {
         return volume;
     }
@@ -44,6 +45,16 @@ public class ControleRemoto implements Controlador {
 
     public void setMenu(boolean menu) {
         this.menu = menu;
+    }
+
+
+    @Override
+    public void mudarCanal(int canal) {
+        if (this.isLigado()) {
+            System.out.println("Mudando para o canal: " + canal);
+        } else {
+            System.out.println("Não é possível mudar de canal. O controle está desligado!");
+        }
     }
 
     @Override

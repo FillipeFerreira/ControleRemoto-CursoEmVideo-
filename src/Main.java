@@ -11,6 +11,7 @@ public class Main {
         System.out.println("\n--- Ligando o controle e mexendo nas funções ---");
         controle.ligar();
         controle.play();
+        controle.mudarCanal(4);
         controle.abrirMenu();
         controle.maisVolume();
         controle.maisVolume();

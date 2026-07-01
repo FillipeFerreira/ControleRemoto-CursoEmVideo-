@@ -9,4 +9,5 @@ public interface Controlador {
     void desligarMudo();
     void play();
     void pause();
+    void mudarCanal (int canal);
 }
